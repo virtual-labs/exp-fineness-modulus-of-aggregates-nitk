@@ -35,12 +35,12 @@
 	},
 	"correctAnswer": "b"
 }, {
-	"question": "Sieve residue is the ",
+	"question": "Fineness Modulus value of a fine sand is? ",
 	"answers": {
-		"a": "Material retained on smaller sieve",
-		"b": "Material retained on pan",
-		"c": "Material retained on larger sieve",
-		"d": "None of these"
+		"a": "< 2.2",
+		"b": "2.2 - 2.6",
+		"c": "1 - 2",
+		"d": "< 1 "
 	},
-	"correctAnswer": "c"
+	"correctAnswer": "b"
 }]

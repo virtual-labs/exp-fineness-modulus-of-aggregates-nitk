@@ -9,9 +9,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type="text/javascript" src= "js/ej.web.all.js"></script> <!-- for graph -->
 <script type="text/javascript" src= "js/sgca.js"></script>
-<!-- <script type="text/javascript" src= "js/jquery-2.1.4.js"></script> -->
-<!-- <script type="text/javascript" src="js/assets/script/canvasjs.min.js"></script> -->
-<!-- <script type="text/javascript" src= "js/jquery-1.7.1.min.js"></script> -->
 
 <script>
 var simsubscreennum=0;
@@ -56,276 +53,194 @@ var lnt=0;
 </style>
 </head>
 
-
-
 <body style="margin:0; font-family:verdana; font-size:14px;">
-<!--Simulation Screen start		-->
 <div id="simscreen">
-
-<!--Title of Simulation		-->
 <div id="title"><h3>Fineness modulus of fine aggregates</h3></div>
 
-<!--SubScreen Home	-->
 <div class="simsubscreen" id="canvas0">
-<h4 class="incanvas" style="font-family:verdana;" >Objective</h4>
-<p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the fineness modulus and fine size distribution of fine aggregates (river sand and beach sand) by sieve analysis.<br><br></p>
-<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
-<p class="incanvas" style="font-family:verdana; font-size:14px;" >Mechanical shaker, Trays, Set of fine sieves with pan, Weighing scale etc.</p>
-&nbsp;<span class="tooltip" style="border-bottom:1px dotted; color:red; position:absolute; top:140px; text-align:justify;"><strong>Description</strong>
-<span  class="tooltiptext" style=""><strong style="color:red;">Fineness Modulus of Fine Aggregate</strong> is an imperial factor obtained by adding the cumulative percentages of fine aggregates retained on each of the standard sieves and dividing the sum by an arbitrary number 100.</span></span>
-
-<img id="" style="position: absolute; left: 450px; top: 415px; width:150px;" title="Weighing scale" src="images/ewm.png"/>
-<img style="position:absolute; left:100px; top:120px; width:150px;" title="" src="images/man.png" />
-<img id="" style="position: absolute; left: 260px; top:350px; width:120px;" title="Mechanical shaker with sieve set" src="images/fs1.png"/>
-
+	<h4 class="incanvas" style="font-family:verdana;" >Objective:</h4>
+	<p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the fineness modulus and fine size distribution of fine aggregates (river sand and beach sand) by sieve analysis.<br><br></p>
+	<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
+	<p class="incanvas" style="font-family:verdana; font-size:14px;" >Mechanical shaker, Trays, Set of fine sieves with pan, Weighing scale etc.</p>
+	&nbsp;<span class="tooltip" style="border-bottom:1px dotted; color:red; position:absolute; top:140px; text-align:justify;"><strong>Description</strong>
+	<span  class="tooltiptext" style=""><strong style="color:red;">Fineness Modulus of Fine Aggregate</strong> is an imperial factor obtained by adding the cumulative percentages of fine aggregates retained on each of the standard sieves and dividing the sum by an arbitrary number 100.</span></span>
+	<img id="" style="position: absolute; left: 450px; top: 415px; width:150px;" title="Weighing scale" src="images/ewm.png"/>
+	<img style="position:absolute; left:100px; top:120px; width:150px;" title="" src="images/man.png" />
+	<img id="" style="position: absolute; left: 260px; top:350px; width:120px;" title="Mechanical shaker with sieve set" src="images/fs1.png"/>
 </div>
 
-<!--Step1	-->
 <div class="simsubscreen" id="canvas1" style="visibility:hidden">
-<strong id="titlestep" class="incanvas">STEP </strong>
-<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
-
-<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Choose the type of sand</p>
-<form id="sand" style="position: absolute; left: 145px; top: 125px; visibility:hidden; font-family:verdana; font-size:14px;">
-  <input type="radio" id="r" name="subject" value="river" > River Sand<br><br><br><br><br><br><br><br><br>
-  <input type="radio" id="b" name="subject" value="beach"> Beach Sand
-</form>
- <img id="rdb" style="position:absolute; left:330px; top:285px;" src="images/rdb.png"/>
-  <img id="plate1-1" style="position:absolute; left:255px; top:227px;" src="images/plate2.png"/>
-   <img id="rdr" style="position:absolute; left:225px; top:28px;" src="images/rdr.png"/>
-
-  <img id="plate1-2" style="position:absolute; left:253px; top:45px;" src="images/plate1.png"/>
-
+	<strong id="titlestep" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+	<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Choose the type of sand</p>
+	<form id="sand" style="position: absolute; left: 145px; top: 125px; visibility:hidden; font-family:verdana; font-size:14px;">
+		<input type="radio" id="r" name="subject" value="river" > River Sand<br><br><br><br><br><br><br><br><br>
+		<input type="radio" id="b" name="subject" value="beach"> Beach Sand
+	</form>
+	<img id="rdb" style="position:absolute; left:330px; top:285px;" src="images/rdb.png"/>
+	<img id="plate1-1" style="position:absolute; left:255px; top:227px;" src="images/plate2.png"/>
+	<img id="rdr" style="position:absolute; left:225px; top:28px;" src="images/rdr.png"/>
+	<img id="plate1-2" style="position:absolute; left:253px; top:45px;" src="images/plate1.png"/>
 </div>
 
-<!--step2-->
 <div class="simsubscreen" id="canvas2" style="visibility:hidden">
-<strong id="titlestep" class="incanvas">STEP </strong>
-<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
-
-<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Take fine aggregate in a pan and measure it to 1Kg using the weighing scale.</p>
-
-<img id="" style="position: absolute; left: 230px; top: 255px;" src="images/ewm1.png"/>
-<img id="mw" style="position: absolute; left: 310px; top: 342px;visibility:hidden" src="images/mw.PNG"/>
-<img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
-
-<img id="rdb2" style="position: absolute; left: 288px; top: 214px;visibility:hidden" src="images/rdb.png"/>
-<img id="rdr2" style="position: absolute; left: 188px; top: 133px;visibility:hidden" src="images/rdr.png"/>
-
-
-<img id="p2" style="position: absolute; left: 251px; top: 213px;cursor:move;visibility:hidden" src="images/plate.png"/>
-
-
-<img id="handr" style="position: absolute; left:410px; top:90px;visibility:hidden" src="images/rivpan.png"/>
-<img id="handb" style="position: absolute; left:410px; top:90px;visibility:hidden" src="images/bchpan.png"/>
-
-<img id="pbs2" style="position: absolute; left:335px; top:170px;visibility:hidden" src="images/pbs.png"/>
-<img id="prs2" style="position: absolute; left:350px; top:185px;visibility:hidden" src="images/prs.png"/>
-
-<img id="on2-1" style="position: absolute; left:300px; top: 380px; cursor:pointer;" src="images/on.png"/>
-<img id="off2-1" style="position: absolute; left: 330px; top: 380px;" src="images/off.png"/>
-<img id="zero2-1" style="position: absolute; left: 360px; top: 380px;" src="images/zero.png"/>
-<img id="tare2-1" style="position: absolute; left: 390px; top: 380px; cursor:pointer;" src="images/tare2.png"/>
-
-<img id="on2-2" style="position: absolute; left:295px; top: 380px;visibility:hidden; cursor:pointer;" src="images/onblue.png"/>
-<img id="on2-3" style="position: absolute; left:300px; top: 380px;visibility:hidden" src="images/on.png"/>
-
-
-<img id="tare2-3" style="position: absolute; left: 390px; top: 380px;visibility:hidden; cursor:pointer;" src="images/tare2.png"/>
-
-<img id="tare2-2" style="position: absolute; left: 385px; top: 380px;visibility:hidden" src="images/tare3.png"/>
-
-<!-- <img id="onarm"  style="margin-left: -50px; margin-top: -50px; position: absolute; visibility: hidden; left: 689px; top: 215px;" src="images/hnd.png">  -->
-
-
-<p id="v2-1" style="position:absolute;left: 342px; top:330px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
-<p id="v2-2" style="position:absolute;left: 326px; top:330px;visibility:hidden;font-family:verdana; font-size:14px;">1000.00   g</p>
-
-
+	<strong id="titlestep" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+	<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Take fine aggregate in a pan and measure it to 1Kg using the weighing scale.</p>
+	<img id="" style="position: absolute; left: 230px; top: 255px;" src="images/ewm1.png"/>
+	<img id="mw" style="position: absolute; left: 310px; top: 342px;visibility:hidden" src="images/mw.PNG"/>
+	<img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
+	<img id="rdb2" style="position: absolute; left: 288px; top: 214px;visibility:hidden" src="images/rdb.png"/>
+	<img id="rdr2" style="position: absolute; left: 188px; top: 133px;visibility:hidden" src="images/rdr.png"/>
+	<img id="p2" style="position: absolute; left: 251px; top: 213px;cursor:move;visibility:hidden" src="images/plate.png"/>
+	<img id="handr" style="position: absolute; left:410px; top:90px;visibility:hidden" src="images/rivpan.png"/>
+	<img id="handb" style="position: absolute; left:410px; top:90px;visibility:hidden" src="images/bchpan.png"/>	
+	<img id="pbs2" style="position: absolute; left:335px; top:170px;visibility:hidden" src="images/pbs.png"/>
+	<img id="prs2" style="position: absolute; left:350px; top:185px;visibility:hidden" src="images/prs.png"/>
+	<img id="on2" style="position: absolute; left:288.5px; top: 375px; cursor:pointer;" src="images/onBtn.png"/>
+	<img id="off2" style="position: absolute; left: 323.5px; top: 375px;" src="images/offBtn.png"/>
+	<img id="zero2" style="position: absolute; left: 358.5px; top: 375px;" src="images/zeroBtn.png"/>
+	<img id="tare2" style="position: absolute; left: 395px; top: 375px; cursor:pointer;" src="images/tareBtn.png"/>
+	<p id="v2-1" style="position:absolute;left: 340px; top:332.5px;visibility:hidden;font-family:verdana; font-size:14px;">0.000 g</p>
+	<p id="v2-2" style="position:absolute;left: 328px; top:332.5px;visibility:hidden;font-family:verdana; font-size:14px;">1000.00 g</p>
 </div>
 
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+	<strong id="titlestep" class="incanvas">STEP &nbsp;</strong>
+	<span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
+	<p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Arrange the sieves in the decreasing order of their size and place the pan at the bottom and then add weighed quantity of fine aggregate to the top most sieve and close the lid.</p>
+	<img id="pan" style="position: absolute; left: 400px; top: 100px;cursor:move;" src="images/pan_fill.png"/>
+	<img id="1" style="position: absolute; left: 550px; top: 100px;cursor:move;" src="images/1.png"/>
+	<img id="2" style="position: absolute; left:400px; top:200px;cursor:move;" src="images/2.png"/>
+	<img id="3" style="position: absolute; left:550px; top: 200px;cursor:move;" src="images/3.png"/>
+	<img id="4" style="position: absolute; left:400px; top: 300px;cursor:move;" src="images/4.png"/>
+	<img id="5" style="position: absolute; left: 550px; top: 300px;cursor:move;" src="images/5.png"/>
+	<img id="6" style="position: absolute; left: 400px; top: 400px;cursor:move;" src="images/6.png"/>
+	<img id="7" style="position: absolute; left:550px; top: 400px;cursor:move;" src="images/7.png"/>
+	<img id="3-10" style="position: absolute; left:110px; top: 181px;visibility:hidden;" src="images/12.png"/>
+	<img id="3-11" style="position: absolute; left:100px; top: 188px;visibility:hidden;" src="images/14.png"/>
+	<img id="pan3-1" style="position: absolute; left: 100px; top: 400px;visibility:hidden;" src="images/pan_fill.png"/>
+	<img id="3-1" style="position: absolute; left:99px; top: 371.5px;visibility:hidden" src="images/1.png"/>
+	<img id="3-2" style="position: absolute; left:99px; top:340px;visibility:hidden" src="images/2.png"/>
+	<img id="3-3" style="position: absolute; left:100px; top:310px;visibility:hidden" src="images/3.png"/>
+	<img id="3-4" style="position: absolute; left:100px; top:281px;visibility:hidden" src="images/4.png"/>
+	<img  id="3-5" style="position: absolute; left:100px; top:243px;visibility:hidden" src="images/5.png"/>
+	<img id="3-6" style="position: absolute; left:100px; top:214.5px;visibility:hidden" src="images/6.png"/>
+	<img id="3-7" style="position: absolute; left:100px; top:182.5px;visibility:hidden" src="images/7.png"/>
+	<img id="3-8" style="position: absolute; left:250px; top:145.5px;visibility:hidden" src="images/8.png"/>
+	<img id="3-9" style="position: absolute; left:100px; top:179px;visibility:hidden" src="images/8.png"/>
+	<img id="hp3-1" style="position: absolute; left:3px; top: 140px;visibility:hidden;" src="images/hp.png"/>
+	<img id="rdb3-1" style="position:absolute; left:212px; top:92px;visibility:hidden;" src="images/rdb.png"/>
+	<img id="plate3-1" style="position:absolute; left:190px; top:48px;visibility:hidden;" src="images/pour.png"/>
+	<img id="rdr3-1" style="position:absolute; left:110px; top:8px;visibility:hidden;" src="images/rdr.png"/>
+	<img id="plate3-2" style="position:absolute; left:195px; top:42px;visibility:hidden;" src="images/pour.png"/>
+	<img id="rs3-1" style="position:absolute; left:135px; top:150px;visibility:hidden;" src="images/rs1.png"/>
+	<img id="bs3-1" style="position:absolute; left:130px; top:150px;visibility:hidden;" src="images/bs1.png"/>
+</div>
 
-<!--Step3	-->
-
-
- <div class="simsubscreen" id="canvas3" style="visibility:hidden">
- <strong id="titlestep" class="incanvas">STEP &nbsp;</strong>
- <span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
- <p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Arrange the sieves in the decreasing order of their size and place the pan at the bottom and then add weighed quantity of fine aggregate to the top most sieve and close the lid.</p>
- <img id="pan" style="position: absolute; left: 400px; top: 100px;cursor:move;" src="images/pan_fill.png"/>
- <img id="1" style="position: absolute; left: 550px; top: 100px;cursor:move;" src="images/1.png"/>
- <img id="2" style="position: absolute; left:400px; top:200px;cursor:move;" src="images/2.png"/>
- <img id="3" style="position: absolute; left:550px; top: 200px;cursor:move;" src="images/3.png"/>
- <img id="4" style="position: absolute; left:400px; top: 300px;cursor:move;" src="images/4.png"/>
- <img id="5" style="position: absolute; left: 550px; top: 300px;cursor:move;" src="images/5.png"/>
- <img id="6" style="position: absolute; left: 400px; top: 400px;cursor:move;" src="images/6.png"/>
- <img id="7" style="position: absolute; left:550px; top: 400px;cursor:move;" src="images/7.png"/>
-
- <img id="3-10" style="position: absolute; left:110px; top: 181px;visibility:hidden;" src="images/12.png"/>
- <img id="3-11" style="position: absolute; left:100px; top: 188px;visibility:hidden;" src="images/14.png"/>
-
-
- <img id="pan3-1" style="position: absolute; left: 100px; top: 400px;visibility:hidden;" src="images/pan_fill.png"/>
- <img id="3-1" style="position: absolute; left:99px; top: 371.5px;visibility:hidden" src="images/1.png"/>
- <img id="3-2" style="position: absolute; left:99px; top:340px;visibility:hidden" src="images/2.png"/>
- <img id="3-3" style="position: absolute; left:100px; top:310px;visibility:hidden" src="images/3.png"/>
- <img id="3-4" style="position: absolute; left:100px; top:281px;visibility:hidden" src="images/4.png"/>
- <img  id="3-5" style="position: absolute; left:100px; top:243px;visibility:hidden" src="images/5.png"/>
- <img id="3-6" style="position: absolute; left:100px; top:214.5px;visibility:hidden" src="images/6.png"/>
- <img id="3-7" style="position: absolute; left:100px; top:182.5px;visibility:hidden" src="images/7.png"/>
-
- <img id="3-8" style="position: absolute; left:250px; top:145.5px;visibility:hidden" src="images/8.png"/>
- <img id="3-9" style="position: absolute; left:100px; top:179px;visibility:hidden" src="images/8.png"/>
-
- <img id="hp3-1" style="position: absolute; left:3px; top: 140px;visibility:hidden;" src="images/hp.png"/>
-
- <img id="rdb3-1" style="position:absolute; left:212px; top:92px;visibility:hidden;" src="images/rdb.png"/>
- <img id="plate3-1" style="position:absolute; left:190px; top:48px;visibility:hidden;" src="images/pour.png"/>
- <img id="rdr3-1" style="position:absolute; left:110px; top:8px;visibility:hidden;" src="images/rdr.png"/>
- <img id="plate3-2" style="position:absolute; left:195px; top:42px;visibility:hidden;" src="images/pour.png"/>
-
- <img id="rs3-1" style="position:absolute; left:135px; top:150px;visibility:hidden;" src="images/rs1.png"/>
- <img id="bs3-1" style="position:absolute; left:130px; top:150px;visibility:hidden;" src="images/bs1.png"/>
-  </div>
-
-
-
-<!--Step4	-->
 <div class="simsubscreen" id="canvas4" style="visibility:hidden">
-<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
-<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Place the set of sieves in the mechanical shaker and allow to shake for 10 minutes.</p>
-
-
- <img id="10" style="position:absolute;left:450px; top:150px; " src="images/10.png"/>
- <img id="11" style="position:absolute; left:80px; top:100px;" src="images/11.png"/>
-
- <img id="11on" style="position:absolute; left:173px; top:420px;" src="images/fon2.png"/>
- <img id="11bon" style="position:absolute; left:173px; top:420px;visibility:hidden;" src="images/fbon2.png"/>
-<div id="4-1off" style="position:absolute; left:192px; top:420px; cursor:pointer; width:20px; height:12px; background-color:transparent;" ></div>
-
- <img id="12" style="position:absolute;left:177px; top:134px;visibility:hidden; " src="images/10.png"/>
-
- <img id="15" style="position:absolute;left:169px; top:112px;visibility:hidden " src="images/15.png"/>
- <img id="15a" style="position:absolute;left:280.5px; top:101.5px;visibility:hidden" src="images/15.png"/>
-
-
- <img id="9" style="position:absolute;left:420px; top:150px; visibility:hidden" src="images/9.png"/>
- <img id="9a" style="position:absolute;left:166px; top:130px;visibility:hidden" src="images/9.png"/>
-
-<img id="15b" style="position:absolute;left:167px; top:119px;visibility:hidden" src="images/15.png"/>
- <img id="15c" style="position:absolute; left:280.5px; top:108px;visibility:hidden" src="images/15.png"/>
-
+	<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+	<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Place the set of sieves in the mechanical shaker and allow to shake for 10 minutes.</p>
+	<img id="10" style="position:absolute;left:450px; top:150px; " src="images/10.png"/>
+	<img id="11" style="position:absolute; left:80px; top:100px;" src="images/11.png"/>
+	<div id="4-1on" style="position:absolute; left:158.5px; top:419px; cursor:pointer; width:22px; height:14px; background-color:transparent; cursor:pointer;"></div>
+	<div id="4-1off" style="position:absolute; left:184px; top:420px; cursor:pointer; width:23px; height:14.5px; background-color:transparent;  cursor:pointer;"></div>
+	<img id="12" style="position:absolute;left:177px; top:134px;visibility:hidden; " src="images/10.png"/>
+	<img id="15" style="position:absolute;left:169px; top:112px;visibility:hidden " src="images/15.png"/>
+	<img id="15a" style="position:absolute;left:280.5px; top:101.5px;visibility:hidden" src="images/15.png"/>
+	<img id="9" style="position:absolute;left:420px; top:150px; visibility:hidden" src="images/9.png"/>
+	<img id="9a" style="position:absolute;left:166px; top:130px;visibility:hidden" src="images/9.png"/>
+	<img id="15b" style="position:absolute;left:167px; top:119px;visibility:hidden" src="images/15.png"/>
+	<img id="15c" style="position:absolute; left:280.5px; top:108px;visibility:hidden" src="images/15.png"/>
 </div>
 
-<!--Step5	-->
 <div class="simsubscreen" id="canvas5" style="visibility:hidden;">
-<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span>
-<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Collect the soil fraction retained on each sieve in a separate container and weigh it.</p>
+	<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span>
+	<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Collect the soil fraction retained on each sieve in a separate container and weigh it.</p>
 
-<img id="5-1" style="position:absolute; left:80px; top:100px;" src="images/11.png"/>
+	<img id="5-1" style="position:absolute; left:80px; top:100px;" src="images/11.png"/>
+	<img id="5-2" style="position:absolute;left:177px; top:134px; " src="images/10.png"/>
+	<img id="5-3" style="position:absolute;left:166px; top:130px;" src="images/9.png"/>
+	<img id="5-4" style="position:absolute;left:420px; top:150px; visibility:hidden" src="images/9.png"/>
+	<img id="5-5" style="position:absolute;left:167px; top:119px;" src="images/15.png"/>
+	<img id="5-6" style="position:absolute; left:280.5px; top:108px;" src="images/15.png"/>
+	<img id="5-7" style="position:absolute;left:165px; top:112px; visibility:hidden " src="images/15.png"/>
+	<img id="5-8" style="position:absolute; left:280.5px; top:101.5px;visibility:hidden" src="images/15.png"/>
+	<img id="5-9" style="position:absolute;left:550px; top:150px;visibility:hidden " src="images/10.png"/>
 
-<img id="5-2" style="position:absolute;left:177px; top:134px; " src="images/10.png"/>
+	<img id="5p" style="position: absolute; left:554px; top: 420px;visibility:hidden;" src="images/b.png"/>
+	<img id="5o" style="position: absolute;left:550px; top: 415px;visibility:hidden;" src="images/r.png"/>
+	<img id="5-10" style="position: absolute; left: 550px; top: 400px;visibility:hidden;" src="images/pan_fill.png"/>
+	<img id="5n" style="position: absolute; left:554px; top: 388px;visibility:hidden;" src="images/b.png"/>
+	<img id="5m" style="position: absolute;left:550px; top: 390px;visibility:hidden;" src="images/r.png"/>
+	<img id="5-11" style="position: absolute; left:549px; top: 371.5px;visibility:hidden" src="images/1a.png"/>
+	<img id="5l" style="position: absolute; left:554px; top: 345px;visibility:hidden;" src="images/b.png"/>
+	<img id="5k" style="position: absolute;left:574px; top: 350px;visibility:hidden;" src="images/r4.png"/>
+	<img id="5-12" style="position: absolute; left:548.5px; top:342px;visibility:hidden" src="images/2a.png"/>
+	<img id="5j" style="position: absolute; left:554px; top: 310px;visibility:hidden;" src="images/b.png"/>
+	<img id="5i" style="position: absolute;left:574px; top: 320px;visibility:hidden;" src="images/r4.png"/>
+	<img id="5-13" style="position: absolute; left:549px; top:310px;visibility:hidden" src="images/3a.png"/>
+	<img id="5h" style="position: absolute; left:554px; top: 280px;visibility:hidden;" src="images/b.png"/>
+	<img id="5g" style="position: absolute;left:575px; top: 285px;visibility:hidden;" src="images/r3.png"/>
+	<img id="5-14" style="position: absolute; left:549px; top:278px;visibility:hidden" src="images/4a.png"/>
+	<img id="5f" style="position: absolute; left:554px; top: 258px;visibility:hidden;" src="images/b.png"/>
+	<img id="5e" style="position: absolute;left:570px; top: 255px;visibility:hidden;" src="images/r3.png"/>
+	<img id="5-15" style="position: absolute; left:550px; top:240px;visibility:hidden" src="images/5a.png"/>
+	<img id="5d" style="position: absolute; left:554px; top: 206px;visibility:hidden;" src="images/b.png"/>
+	<img id="5c" style="position: absolute;left:575px; top: 218px;visibility:hidden;" src="images/r2.png"/>
+	<img id="5-16" style="position: absolute; left:550px; top:209px;visibility:hidden" src="images/6a.png"/>
+	<img id="5b" style="position: absolute; left:554px; top: 174px;visibility:hidden;" src="images/b.png"/>
+	<img id="5a" style="position: absolute;left:564px; top: 190px;visibility:hidden;" src="images/ri1.png"/>
+	<img id="5-17" style="position: absolute; left:550px; top:178px;visibility:hidden" src="images/7.png"/>
+	<img id="5-18" style="position: absolute; left:550px; top: 174px;visibility:hidden" src="images/8.png"/>
 
-<img id="5-3" style="position:absolute;left:166px; top:130px;" src="images/9.png"/>
-<img id="5-4" style="position:absolute;left:420px; top:150px; visibility:hidden" src="images/9.png"/>
+	<img id="riv5-3" style="position: absolute; left: 95px; top: 140px;visibility:hidden;" src="images/rdr.png"/>
+	<img id="riv5-3a" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/ri1.png"/>
+	<img id="riv5-3b" style="position: absolute;left: 210px; top:235px;visibility:hidden;" src="images/r2.png"/>
+	<img id="riv5-3c" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r3.png"/>
+	<img id="riv5-3d" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r3.png"/>
+	<img id="riv5-3e" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r4.png"/>
+	<img id="riv5-3f" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r4.png"/>
+	<img id="bch5-3" style="position: absolute; left: 195px; top:235px;visibility:hidden;" src="images/rdb.png"/>
 
-<img id="5-5" style="position:absolute;left:167px; top:119px;" src="images/15.png"/>
-<img id="5-6" style="position:absolute; left:280.5px; top:108px;" src="images/15.png"/>
-<img id="5-7" style="position:absolute;left:165px; top:112px; visibility:hidden " src="images/15.png"/>
-<img id="5-8" style="position:absolute; left:280.5px; top:101.5px;visibility:hidden" src="images/15.png"/>
-<img id="5-9" style="position:absolute;left:550px; top:150px;visibility:hidden " src="images/10.png"/>
+	<img id="ewm5" style="position: absolute; left: 130px; top: 255px;visibility:hidden;" src="images/ewm1.png"/>
+	<img id="mw5" style="position: absolute; left: 212px; top: 342px;visibility:hidden;" src="images/mw.PNG"/>
+	<img id="p5" style="position: absolute; left: 151px; top: 213px;cursor:move;visibility:hidden;" src="images/plate.png"/>
 
+	<p id="v5-1" style="position:absolute;left: 235px; top:333px;visibility:hidden;font-family:verdana; font-size:14px;">0.000 g</p>
+	<p id="v5-2" style="position:absolute;left: 235px; top:333px;visibility:hidden;font-family:verdana; font-size:14px;"> </p>
 
- <img id="5p" style="position: absolute; left:554px; top: 420px;visibility:hidden;" src="images/b.png"/>
- <img id="5o" style="position: absolute;left:550px; top: 415px;visibility:hidden;" src="images/r.png"/>
- <img id="5-10" style="position: absolute; left: 550px; top: 400px;visibility:hidden;" src="images/pan_fill.png"/>
- <img id="5n" style="position: absolute; left:554px; top: 388px;visibility:hidden;" src="images/b.png"/>
- <img id="5m" style="position: absolute;left:550px; top: 390px;visibility:hidden;" src="images/r.png"/>
- <img id="5-11" style="position: absolute; left:549px; top: 371.5px;visibility:hidden" src="images/1a.png"/>
- <img id="5l" style="position: absolute; left:554px; top: 345px;visibility:hidden;" src="images/b.png"/>
- <img id="5k" style="position: absolute;left:574px; top: 350px;visibility:hidden;" src="images/r4.png"/>
- <img id="5-12" style="position: absolute; left:548.5px; top:342px;visibility:hidden" src="images/2a.png"/>
- <img id="5j" style="position: absolute; left:554px; top: 310px;visibility:hidden;" src="images/b.png"/>
- <img id="5i" style="position: absolute;left:574px; top: 320px;visibility:hidden;" src="images/r4.png"/>
- <img id="5-13" style="position: absolute; left:549px; top:310px;visibility:hidden" src="images/3a.png"/>
- <img id="5h" style="position: absolute; left:554px; top: 280px;visibility:hidden;" src="images/b.png"/>
- <img id="5g" style="position: absolute;left:575px; top: 285px;visibility:hidden;" src="images/r3.png"/>
- <img id="5-14" style="position: absolute; left:549px; top:278px;visibility:hidden" src="images/4a.png"/>
- <img id="5f" style="position: absolute; left:554px; top: 258px;visibility:hidden;" src="images/b.png"/>
- <img id="5e" style="position: absolute;left:570px; top: 255px;visibility:hidden;" src="images/r3.png"/>
- <img id="5-15" style="position: absolute; left:550px; top:240px;visibility:hidden" src="images/5a.png"/>
- <img id="5d" style="position: absolute; left:554px; top: 206px;visibility:hidden;" src="images/b.png"/>
- <img id="5c" style="position: absolute;left:575px; top: 218px;visibility:hidden;" src="images/r2.png"/>
- <img id="5-16" style="position: absolute; left:550px; top:209px;visibility:hidden" src="images/6a.png"/>
- <img id="5b" style="position: absolute; left:554px; top: 174px;visibility:hidden;" src="images/b.png"/>
- <img id="5a" style="position: absolute;left:564px; top: 190px;visibility:hidden;" src="images/ri1.png"/>
- <img id="5-17" style="position: absolute; left:550px; top:178px;visibility:hidden" src="images/7.png"/>
- <img id="5-18" style="position: absolute; left:550px; top: 174px;visibility:hidden" src="images/8.png"/>
+	<img id="riv5-1" style="position: absolute; left: 334px; top: 145px;visibility:hidden;" src="images/riv.png"/>
+	<img id="bch5-1" style="position: absolute; left: 334px; top: 145px;visibility:hidden;" src="images/b.png"/>
 
+	<img id="riv5-1a" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/ri1.png"/>
+	<img id="riv5-1b" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r2.png"/>
+	<img id="riv5-1c" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r3.png"/>
+	<img id="riv5-1d" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r3.png"/>
+	<img id="riv5-1e" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r4.png"/>
+	<img id="riv5-1f" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r4.png"/>
 
- <img id="riv5-3" style="position: absolute; left: 95px; top: 140px;visibility:hidden;" src="images/rdr.png"/>
- <img id="riv5-3a" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/ri1.png"/>
- <img id="riv5-3b" style="position: absolute;left: 210px; top:235px;visibility:hidden;" src="images/r2.png"/>
- <img id="riv5-3c" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r3.png"/>
- <img id="riv5-3d" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r3.png"/>
- <img id="riv5-3e" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r4.png"/>
- <img id="riv5-3f" style="position: absolute; left: 210px; top:235px;visibility:hidden;" src="images/r4.png"/>
- <img id="bch5-3" style="position: absolute; left: 195px; top:235px;visibility:hidden;" src="images/rdb.png"/>
+	<img id="riv5-2" style="position: absolute; left: 255px; top: 185px;visibility:hidden;" src="images/rs1.png"/>
+	<img id="bch5-2" style="position: absolute; left: 245px; top: 185px;visibility:hidden;" src="images/bs1.png"/>
 
- <img id="ewm5" style="position: absolute; left: 130px; top: 255px;visibility:hidden;" src="images/ewm1.png"/>
- <img id="mw5" style="position: absolute; left: 212px; top: 342px;visibility:hidden;" src="images/mw.PNG"/>
- <img id="p5" style="position: absolute; left: 151px; top: 213px;cursor:move;visibility:hidden;" src="images/plate.png"/>
+	<img id="riv5-4" style="position: absolute; left: 255px; top: 185px;visibility:hidden;" src="images/prs2.png"/>
 
+	<img id="sp5-1" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/sp.png"/>
+	<img id="s5-1" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s4.png"/>
+	<img id="s5-2" style="position: absolute;left: 330px; top: 105px;visibility:hidden;" src="images/s5.png"/>
+	<img id="s5-3" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s6.png"/>
+	<img id="s5-4" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s7.png"/>
+	<img id="s5-5" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s1.png"/>
+	<img id="s5-6" style="position: absolute;left: 330px; top: 105px;visibility:hidden;" src="images/s2.png"/>
+	<img id="s5-7" style="position: absolute;left: 330px; top: 105px;visibility:hidden;" src="images/s3.png"/>
 
- <p id="v5-1" style="position:absolute;left: 235px; top:333px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
- <p id="v5-2" style="position:absolute;left: 235px; top:333px;visibility:hidden;font-family:verdana; font-size:14px;"> </p>
-
-
- <img id="riv5-1" style="position: absolute; left: 334px; top: 145px;visibility:hidden;" src="images/riv.png"/>
- <img id="bch5-1" style="position: absolute; left: 334px; top: 145px;visibility:hidden;" src="images/b.png"/>
-
- <img id="riv5-1a" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/ri1.png"/>
- <img id="riv5-1b" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r2.png"/>
- <img id="riv5-1c" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r3.png"/>
- <img id="riv5-1d" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r3.png"/>
- <img id="riv5-1e" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r4.png"/>
- <img id="riv5-1f" style="position: absolute; left: 350px; top: 155px;visibility:hidden;" src="images/r4.png"/>
-
-
-
- <img id="riv5-2" style="position: absolute; left: 255px; top: 185px;visibility:hidden;" src="images/rs1.png"/>
- <img id="bch5-2" style="position: absolute; left: 245px; top: 185px;visibility:hidden;" src="images/bs1.png"/>
-
-<img id="riv5-4" style="position: absolute; left: 255px; top: 185px;visibility:hidden;" src="images/prs2.png"/>
-
-
-
-
-
- <img id="sp5-1" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/sp.png"/>
- <img id="s5-1" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s4.png"/>
- <img id="s5-2" style="position: absolute;left: 330px; top: 105px;visibility:hidden;" src="images/s5.png"/>
- <img id="s5-3" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s6.png"/>
- <img id="s5-4" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s7.png"/>
- <img id="s5-5" style="position: absolute; left: 330px; top: 105px;visibility:hidden;" src="images/s1.png"/>
- <img id="s5-6" style="position: absolute;left: 330px; top: 105px;visibility:hidden;" src="images/s2.png"/>
- <img id="s5-7" style="position: absolute;left: 330px; top: 105px;visibility:hidden;" src="images/s3.png"/>
-
-
-
- <img id="on5-1" style="position: absolute; left:200px; top: 380px; visibility:hidden" src="images/on.png"/>
-<img id="off5-1" style="position: absolute; left: 230px; top: 380px;visibility:hidden" src="images/off.png"/>
-<img id="zero5-1" style="position: absolute; left: 260px; top: 380px;visibility:hidden" src="images/zero.png"/>
-<img id="tare5-1" style="position: absolute; left: 290px; top: 380px; cursor:pointer; visibility:hidden" src="images/tare2.png"/>
-
-
-<h3 id="stat1" style="position: absolute; visibility:hidden; left:360px; top:200px;font-family:verdana; font-size:14px;">Please HOVER on the SIEVE SET to shake it</h3>
-<h3 id="stat2" style="position: absolute; visibility:hidden; left:360px; top:200px;font-family:verdana; font-size:14px;">Please HOVER out of the SIEVE SET to proceed</h3>
-
-<img id="tare5-3" style="position: absolute; left: 290px; top: 380px; cursor:pointer; visibility:hidden" src="images/tare2.png"/>
-
-<img id="tare5-2" style="position: absolute; left: 285px; top: 380px; cursor:pointer; visibility:hidden" src="images/tare3.png"/>
-
+	<img id="on5" style="position: absolute; left:190px; top: 375px; cursor:pointer; visibility:hidden;" src="images/onBtn.png"/>
+	<img id="off5" style="position: absolute; left:225px; top: 375px; visibility:hidden;" src="images/offBtn.png"/>
+	<img id="zero5" style="position: absolute; left:260px; top: 375px; visibility:hidden;" src="images/zeroBtn.png"/>
+	<img id="tare5" style="position: absolute; left:295px; top: 375px; cursor:pointer; visibility:hidden;" src="images/tareBtn.png"/>
+		
+	<h3 id="stat1" style="position: absolute; visibility:hidden; left:360px; top:200px;font-family:verdana; font-size:14px;">Please HOVER on the SIEVE SET to shake it</h3>
+	<h3 id="stat2" style="position: absolute; visibility:hidden; left:360px; top:200px;font-family:verdana; font-size:14px;">Please HOVER out of the SIEVE SET to proceed</h3>
 </div>
 
 
@@ -651,7 +566,7 @@ var lnt=0;
 
 <div id="7-1" style="position:absolute; left:550px; top:125px; font-family:verdana; font-size:14px; visibility:hidden;">
 <label id="l7-1" title="Effective size at 10% finer by weight">D<sub>10</sub> = </label>
-<input id="output1" type="text" style=" border:none; border-bottom:2px solid #FF1493; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="output1" type="text" style=" border:none; border-bottom:3px solid #FF1493; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;
 <input id="check1" type="button" name="check" value="Check" style="position:absolute; left:130px;"/>
 
 <p id="r1" style="position:absolute; left:107.5px; top:-27.5px; color:#32CD32; font-size:22px; visibility:hidden;" >&#10004;</p>
@@ -660,7 +575,7 @@ var lnt=0;
 
 <div id="7-2" style="position:absolute; left:550px; top:175px; font-family:verdana; font-size:14px; visibility:hidden;">
 <label id="l7-2" title="Effective size at 30% finer by weight">D<sub>30</sub> = </label>
-<input id="output2" type="text" style=" border:none; border-bottom:2px solid #008000; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="output2" type="text" style=" border:none; border-bottom:3px solid #008000; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;
 <input id="check2" type="button" name="check" value="Check" style="position:absolute; left:130px;"/>
 
 <p id="r2" style="position:absolute; left:107.5px; top:-27.5px; color:#32CD32; font-size:22px; visibility:hidden;" >&#10004;</p>
@@ -668,7 +583,7 @@ var lnt=0;
 
 <div id="7-3" style="position:absolute; left:550px; top:225px; font-family:verdana; font-size:14px; visibility:hidden;">
 <label id="l7-3" title="Effective size at 60% finer by weight">D<sub>60</sub> = </label>
-<input id="output3" type="text" style=" border:none; border-bottom:2px solid #B22222; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="output3" type="text" style=" border:none; border-bottom:3px solid #B22222; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;
 <input id="check3" type="button" name="check" value="Check" style="position:absolute; left:130px;"/>
 
 <p id="r3" style="position:absolute; left:107.5px; top:-27.5px; color:#32CD32; font-size:22px; visibility:hidden;" >&#10004;</p>

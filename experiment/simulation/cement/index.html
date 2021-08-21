@@ -71,7 +71,7 @@ var lnt=0;
 
 <!--SubScreen Home	-->
 <div class="simsubscreen" id="canvas0">
-<h4 class="incanvas" style="font-family:verdana;" >Objective</h4>
+<h4 class="incanvas" style="font-family:verdana;" >Objective:</h4>
 <p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the fineness of cement by dry sieving.</p></br>
 <h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
 <p class="incanvas" style="font-family:verdana; font-size:14px;">Mechanical shaker, Trays, 90&micro;m sieve, Weighing scale etc.</p>
@@ -97,31 +97,35 @@ var lnt=0;
 
 <img id="p2" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
 
-
 <img id="pwc" style="position: absolute; left:350px; top:185px;visibility:hidden" src="images/pc.png"/>
 
 <img id="hand"  style="position: absolute; visibility: hidden; left: 420px; top: 65px;" src="images/pour.png"/>
 
-<img id="on2-1" style="position: absolute; left:300px; top: 380px;" src="images/on.png"/>
-<img id="off2-1" style="position: absolute; left: 330px; top: 380px;" src="images/off.png"/>
-<img id="zero2-1" style="position: absolute; left: 360px; top: 380px;" src="images/zero.png"/>
-<img id="tare2-1" style="position: absolute; left: 390px; top: 380px;" src="images/tare2.png"/>
+<!-- <img id="on2-1" style="position: absolute; left:300px; top: 380px;" src="images/on.png"/> -->
+<!-- <img id="off2-1" style="position: absolute; left: 330px; top: 380px;" src="images/off.png"/> -->
+<!-- <img id="zero2-1" style="position: absolute; left: 360px; top: 380px;" src="images/zero.png"/> -->
+<!-- <img id="tare2-1" style="position: absolute; left: 390px; top: 380px;" src="images/tare2.png"/> -->
 
-<img id="on2-2" style="position: absolute; left:295px; top: 380px;visibility:hidden" src="images/onblue.png"/>
-<img id="on2-3" style="position: absolute; left:300px; top: 380px;visibility:hidden" src="images/on.png"/>
-
-
-<img id="tare2-3" style="position: absolute; left: 390px; top: 380px;visibility:hidden" src="images/tare2.png"/>
-
-<img id="tare2-2" style="position: absolute; left: 385px; top: 380px;visibility:hidden" src="images/tare3.png"/>
-
-<img id="onarm"  style="margin-left: -50px; margin-top: -50px; position: absolute; visibility: hidden; left: 689px; top: 215px;" src="images/hand.png">
+<!-- <img id="on2-2" style="position: absolute; left:295px; top: 380px;visibility:hidden" src="images/onblue.png"/> -->
+<!-- <img id="on2-3" style="position: absolute; left:300px; top: 380px;visibility:hidden" src="images/on.png"/> -->
 
 
-<p id="v2-1" style="position:absolute;left: 330px; top:332.75px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
-<p id="v2-2" style="position:absolute;left: 326px; top:334px;visibility:hidden;font-family:verdana; font-size:14px;">100.00   g</p>
+<!-- <img id="tare2-3" style="position: absolute; left: 390px; top: 380px;visibility:hidden" src="images/tare2.png"/> -->
+
+<!-- <img id="tare2-2" style="position: absolute; left: 385px; top: 380px;visibility:hidden" src="images/tare3.png"/> -->
+
+<!-- <img id="onarm"  style="margin-left: -50px; margin-top: -50px; position: absolute; visibility: hidden; left: 689px; top: 215px;" src="images/hand.png"> -->
+
+
+<p id="v2-1" style="position:absolute;left: 330px; top:332.75px;visibility:hidden;font-family:verdana; font-size:14px;">0.000</p>
+<p id="v2-2" style="position:absolute;left: 326px; top:334px;visibility:hidden;font-family:verdana; font-size:14px;">100.00</p>
 
 <img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
+
+<img id="on2" style="position: absolute; left:287.5px; top:375px; cursor:pointer;" src="images/onBtn.png"/>
+<img id="off2" style="position: absolute; left:325px; top:375px; cursor:pointer;" src="images/offBtn.png"/>
+<img id="zero2" style="position: absolute; left:362.5px; top:375px; cursor:pointer;" src="images/zeroBtn.png"/>
+<img id="tare2" style="position: absolute; left:400px; top:375px; cursor:pointer;" src="images/tareBtn.png"/>
 
 </div>
 
@@ -207,7 +211,6 @@ var lnt=0;
 <img id="5-14" style="position: absolute; left:220px; top:225px;visibility:hidden" src="images/ssc.png"/>
 <img id="5-15" style="position: absolute; left:220px; top:240px;visibility:hidden" src="images/ssc.png"/>
 
-
 <img id="ewm5" style="position: absolute; left: 130px; top: 255px;visibility:hidden;" src="images/ewm1.png"/>
 <img id="mw5" style="position: absolute; left: 212px; top: 342px;visibility:hidden;" src="images/mw.png"/>
 <img id="p5" style="position: absolute; left: 151px; top: 212.25px;cursor:move;visibility:hidden;" src="images/plate.png"/>
@@ -215,26 +218,19 @@ var lnt=0;
 <img id="5-16" style="position: absolute; left:240px; top:200px;visibility:hidden" src="images/pc.png"/>
 <img id="5-17" style="position: absolute; left:245px; top:205px;visibility:hidden" src="images/pc1.png"/>
 
-<p id="v5-1" style="position:absolute;left: 235px; top:331.5px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
+<p id="v5-1" style="position:absolute;left: 235px; top:331.5px;visibility:hidden;font-family:verdana; font-size:14px;">0.000 </p>
 <p id="v5-2" style="position:absolute;left: 235px; top:331.5px;visibility:hidden;font-family:verdana; font-size:14px;"> </p>
 
 <img id="5-18" style="position: absolute; left:315px; top:138px;visibility:hidden" src="images/psc.png"/>
 <img id="5-19" style="position: absolute; left:315px; top:148px;visibility:hidden" src="images/psc.png"/>
 
-
 <img id="sp5-1" style="position: absolute; left: 300px; top: 98px;visibility:hidden;" src="images/sp90.png"/>
 <img id="sp5-2" style="position: absolute; left: 300px; top: 98px;visibility:hidden;" src="images/sp.png"/>
 
-
-<img id="on5-1" style="position: absolute; left:200px; top: 380px; visibility:hidden" src="images/on.png"/>
-<img id="off5-1" style="position: absolute; left: 230px; top: 380px; visibility:hidden" src="images/off.png"/>
-<img id="zero5-1" style="position: absolute; left: 260px; top: 380px; visibility:hidden" src="images/zero.png"/>
-<img id="tare5-1" style="position: absolute; left: 290px; top: 380px; cursor:pointer; visibility:hidden" src="images/tare2.png"/>
-
-<img id="tare5-3" style="position: absolute; left: 290px; top: 380px; cursor:pointer; visibility:hidden" src="images/tare2.png"/>
-
-<img id="tare5-2" style="position: absolute; left: 285px; top: 380px; cursor:pointer; visibility:hidden" src="images/tare3.png"/>
-
+<img id="on5" style="position: absolute; left:194px; top:375px; cursor:pointer; visibility:hidden;" src="images/onBtn.png"/>
+<img id="off5" style="position: absolute; left:230px; top:375px; cursor:pointer; visibility:hidden;" src="images/offBtn.png"/>
+<img id="zero5" style="position: absolute; left:266px; top:375px; cursor:pointer; visibility:hidden;" src="images/zeroBtn.png"/>
+<img id="tare5" style="position: absolute; left:304px; top:375px; cursor:pointer; visibility:hidden;" src="images/tareBtn.png"/>
 </div>
 
 <!--Step5	-->
