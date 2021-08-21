@@ -24,8 +24,8 @@ a. 5&micro;<br>
 c. 20&micro;<br>
 d. 50&micro;<br>
 
-Q 5. Sieve residue is the <br>
-a. Material retained on smaller sieve<br>
-b. Material retained on pan<br>
-<b>c. Material retained on larger sieve</b><br>
-d. None of these<br>
+Q 5. Fineness Modulus value of a fine sand is? <br>
+a. < 2.2<br>
+<b>b. 2.2 - 2.6</b><br>
+c. 1 - 2<br>
+d. < 1 <br>
