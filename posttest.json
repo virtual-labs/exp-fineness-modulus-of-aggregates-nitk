@@ -1,0 +1,46 @@
+[{
+	"question": "The higher is the Fineness Modulus of aggregate, then ",
+	"answers": {
+		"a": "Coarser is the aggregate",
+		"b": "Finer is the aggregate",
+		"c": "Coarser or finer the aggregate",
+		"d": "None of the above"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "Aggregate size affects which of the following concrete properties? ",
+	"answers": {
+		"a": "Water demand",
+		"b": "Cement content",
+		"c": "Strength",
+		"d": "All the above"
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "Fineness test of cement measures the",
+	"answers": {
+		"a": "Surface area of the cement particle per unit mass",
+		"b": "Particle size of cement",
+		"c": "Fineness modulus of cement",
+		"d": "All the above"
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "The average size of cement particle is ",
+	"answers": {
+		"a": "5&micro;",
+		"b": "10&micro;",
+		"c": "20&micro;",
+		"d": "50&micro;"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "Fineness Modulus value of a fine sand is? ",
+	"answers": {
+		"a": "< 2.2",
+		"b": "2.2 - 2.6",
+		"c": "1 - 2",
+		"d": "< 1 "
+	},
+	"correctAnswer": "b"
+}]
